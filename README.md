@@ -1,9 +1,6 @@
-# Repo to learn Docker with examples. Contributions are most welcome.
+# Repo to learn Docker with examples.
 
 ## If you found this repo useful, give it a STAR 🌠
-
-You can watch the video version of this repo on my youtube playlist. -> https://www.youtube.com/watch?v=7JZP345yVjw&list=PLdpzxOOAlwvLjb0vTD9BXLOwwLD_GWCmC
-
 
 ## What is a container ?
 
@@ -14,8 +11,6 @@ Ok, let me make it easy !!!
 A container is a bundle of Application, Application libraries required to run your application and the minimum system dependencies.
 
 ![Screenshot 2023-02-07 at 7 18 10 PM](https://user-images.githubusercontent.com/43399466/217262726-7cabcb5b-074d-45cc-950e-84f7119e7162.png)
-
-
 
 ## Containers vs Virtual Machine 
 
@@ -28,8 +23,6 @@ Containers and virtual machines are both technologies used to isolate applicatio
     3. Security: VMs provide a higher level of security as each VM has its own operating system and can be isolated from the host and other VMs. Containers provide less isolation, as they share the host operating system.
 
    4.  Management: Managing containers is typically easier than managing VMs, as containers are designed to be lightweight and fast-moving.
-
-
 
 ## Why are containers light weight ?
 
@@ -205,6 +198,8 @@ This can mean two things,
 ### Start Docker daemon
 
 You use the below command to verify if the docker daemon is actually started and Active
+<img width="1378" height="535" alt="Screenshot 2025-12-02 192514" src="https://github.com/user-attachments/assets/0cd5c728-5296-4557-8012-09e6662e5066" />
+
 
 ```
 sudo systemctl status docker
@@ -255,7 +250,7 @@ This message shows that your installation appears to be working correctly.
 ### Clone this repository and move to example folder
 
 ```
-git clone https://github.com/iam-veeramalla/Docker-Zero-to-Hero
+git clone https://github.com/Hadeedahmed254/First-Docker-Image
 cd  examples
 ```
 
@@ -267,7 +262,7 @@ docker login
 
 ```
 Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
-Username: abhishekf5
+Username: Hadeedahmed254
 Password:
 WARNING! Your password will be stored unencrypted in /home/ubuntu/.docker/config.json.
 Configure a credential helper to remove this warning. See
@@ -281,10 +276,12 @@ Login Succeeded
 You need to change the username accoringly in the below command
 
 ```
-docker build -t abhishekf5/my-first-docker-image:latest .
+docker build -t hadeedahmed254/first-python-image:latest .
 ```
 
 Output of the above command
+
+<img width="1451" height="695" alt="Screenshot 2025-12-02 193028" src="https://github.com/user-attachments/assets/c48b175c-b549-4a1b-b553-ef4939b92991" />
 
 ```
     Sending build context to Docker daemon  992.8kB
@@ -321,10 +318,10 @@ docker images
 ```
 
 Output 
+<img width="1067" height="118" alt="Screenshot 2025-12-02 193719" src="https://github.com/user-attachments/assets/ddbff865-727b-4b99-8cf6-e12e3edb6d79" />
 
 ```
 REPOSITORY                         TAG       IMAGE ID       CREATED          SIZE
-abhishekf5/my-first-docker-image   latest    960d37536dcd   26 seconds ago   467MB
 ubuntu                             latest    58db3edaf2be   13 days ago      77.8MB
 hello-world                        latest    feb5d9fea6a5   16 months ago    13.3kB
 ```
@@ -332,10 +329,11 @@ hello-world                        latest    feb5d9fea6a5   16 months ago    13.
 ### Run your First Docker Container
 
 ```
-docker run -it abhishekf5/my-first-docker-image
+docker run -it hadeedahmed254/first-docker-image
 ```
 
 Output
+<img width="1102" height="49" alt="Screenshot 2025-12-02 193737" src="https://github.com/user-attachments/assets/3ac453be-613e-4021-94ec-237e2acfebe2" />
 
 ```
 Hello World
@@ -344,14 +342,14 @@ Hello World
 ### Push the Image to DockerHub and share it with the world
 
 ```
-docker push abhishekf5/my-first-docker-image
+docker push hadeedahmed254/first-docker-image
 ```
 
 Output
 
 ```
 Using default tag: latest
-The push refers to repository [docker.io/abhishekf5/my-first-docker-image]
+The push refers to repository [docker.io/hadeedahmed254/my-first-docker-image]
 896818320e80: Pushed
 b8088c305a52: Pushed
 69dd4ccec1a0: Pushed
@@ -359,4 +357,4 @@ c5ff2d88f679: Mounted from library/ubuntu
 latest: digest: sha256:6e49841ad9e720a7baedcd41f9b666fcd7b583151d0763fe78101bb8221b1d88 size: 1157
 ```
 
-### You must be feeling like a champ already 
+###feeling like a champ already 
